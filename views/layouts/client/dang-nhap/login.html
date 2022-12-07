@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--[if IE]><meta http-equiv="cleartype" content="on" /><![endif]-->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
+      id="viewport" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Đăng nhập</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdiYGAiAAAAABXjxPD9Ht_JQ8f36qcP3DPDnQsG"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- <div class="bg"></div> -->
+      <main class="wrapper">
+        <h1>Đăng nhập</h1>
+        <form action="">
+          <div class="form-group" id="form-tk">
+            <label class="label" for="">Tên tài khoản</label>
+            <input
+              onload="myfunction1(0,this)"
+              onfocus="myfunction(0)"
+              onblur="myfunction1(0,this)"
+              type="text"
+              name=""
+              id="input_tk"
+              placeholder="" />
+          </div>
+          <div class="form-group" id="form-mk">
+            <label class="label" id="mk" for="">Mật khẩu</label>
+            <input
+              onfocus="myfunction(1)"
+              onblur="myfunction1(1,this)"
+              type="text"
+              name=""
+              id="input_mk"
+              placeholder="" />
+            <div class="text_fp">
+              <a class="forgot_pw" href="./forgot_pw.html">Quên mật khẩu</a>
+            </div>
+          </div>
+          <!-- <input type="text" id="g-recaptcha-response" name="g-recaptcha-response" /><br>
+                -->
+          <a id="login" href="./login.html">Đăng nhập</a>
+        </form>
+        <a class="home" href="/home">Trang chủ</a>
+      </main>
+    </div>
+    <script>
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute("6LdiYGAiAAAAABXjxPD9Ht_JQ8f36qcP3DPDnQsG", {
+            action: "action_name",
+          })
+          .then(function (token) {
+            document.getElementById("g-recaptcha-response");
+            console.log(token);
+          });
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
+    <script src="../js/login.js"></script>
+  </body>
+</html>
