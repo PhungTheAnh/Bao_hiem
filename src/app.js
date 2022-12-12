@@ -19,15 +19,19 @@ app.engine(
 );
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "resources/views"));
-//
+
+//route
+app.get("/bao-gia", function (req, res) {
+  res.render("partials/bao-gia/bao-gia");
+});
+
 app.get("/", function (req, res) {
-  res.render("home");
+  res.render("partials/page/home");
 });
 
-app.get("/news", function (req, res) {
-  res.render("News");
+app.get("/dang-nhap", function (req, res) {
+  res.render("partials/dang-nhap/login");
 });
-
 
 app.listen(port, () =>
   console.log(`Du an dang chay tai http://localhost:${port}`)
