@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/home.css">
-{{!--  --}}
+{{!-- --}}
 <header>
     <div class="wrapper">
         <div class="header-logo">
@@ -18,10 +18,12 @@
         </div>
         <nav class="header-navigation">
             <ul class="list-navbar">
-                <li><a class="trans" href="./ve-chung-toi">Về chúng tôi</a></li>
-                <li><a class="trans" href="./lien-he">Liên hệ</a></li>
+                <li><a class="trans" href="/ve-chung-toi">Về chúng tôi</a></li>
+                <li><a class="trans" href="/lien-he">Liên hệ</a></li>
             </ul>
-            <a class="header-login" href="./dang-nhap/login.html">Đăng nhập</a>
+            <div id="user">
+                <a class="header-login" href="/dang-nhap">Đăng nhập</a>
+            </div>
         </nav>
     </div>
     <div class="menu-block js-header-menu">
@@ -862,3 +864,18 @@
         </div>
     </div>
 </header>
+<script>
+    const user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
+    console.log(user);
+    if (user) {
+        document.getElementById('user').innerHTML = `<span style="font-weight:600; margin:0 20px; font-size:1rem">Hi, ${user.name}</span>` + ' <button class="header-logout" id="logout">Đăng xuất</button>';
+
+        document.getElementById('logout').addEventListener('click', () => {
+            localStorage.removeItem('user');
+
+            alert('dang xuat thanh cong')
+
+            document.location = 'http://localhost:4000/dang-nhap';
+        })
+    }
+</script>

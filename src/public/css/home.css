@@ -423,6 +423,21 @@ header .header-login:hover {
   background-color: #fff;
 }
 
+header .header-logout {
+  padding: 8px 10px;
+  background     : #209956;
+  border         : 1px solid #209956;
+  border-radius: 20px;
+  font-weight    : 500;
+  color          : #FFFFFF;
+  transition     : all 0.3s ease;
+}
+
+header .header-logout:hover {
+  color           : #209956;
+  background-color: #fff;
+}
+
 @media print,
 (min-width: 768px) {
   header {

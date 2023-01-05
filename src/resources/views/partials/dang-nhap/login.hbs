@@ -8,7 +8,7 @@
     <form action="">
       <div class="form-group" id="form-tk">
         <label class="label" for="">Email</label>
-        <input onload="myfunction1(0,this)" onfocus="myfunction(0)" onblur="myfunction1(0,this)" type="text" name=""
+        <input onload="myfunction1(0,this)" onfocus="myfunction(0)" onblur="myfunction1(0,this)" type="text"
           id="input_tk" placeholder="" />
       </div>
       <div class="form-group" id="form-mk">
@@ -20,13 +20,13 @@
       </div>
       <!-- <input type="text" id="g-recaptcha-response" name="g-recaptcha-response" /><br>
                 -->
-      <a id="login" href="/">Đăng nhập</a>
+      <button id="login" type="button">Đăng nhập</button>
     </form>
     <a class="home" href="/">Trang chủ</a>
   </main>
 </div>
 <script>
-  grecaptcha.ready(function () {
+  {{!-- grecaptcha.ready(function () {
     grecaptcha
       .execute("6LdiYGAiAAAAABXjxPD9Ht_JQ8f36qcP3DPDnQsG", {
         action: "action_name",
@@ -35,6 +35,18 @@
         document.getElementById("g-recaptcha-response");
         console.log(token);
       });
+  }); --}}
+  {{!--  --}}
+  document.getElementById('login').addEventListener('click', () => {
+    fetch('http://localhost:4000/dang-nhap/kiem-tra?email=' + document.getElementById('input_tk').value + '&password=' + document.getElementById('input_mk').value)
+      .then(res => res.json())
+      .then(data => {
+        const { user } = data;
+        localStorage.setItem('user', JSON.stringify(user[0]))
+        alert('Dang nhap thanh cong');
+
+        document.location = "http://localhost:4000";
+      })
   });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

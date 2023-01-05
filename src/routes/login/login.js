@@ -3,6 +3,7 @@ const router = express.Router();
 
 const loginController = require("../../app/controllers/login/loginController");
 //
+router.use("/kiem-tra", loginController.login);
 router.use("/", loginController.index);
 
 module.exports = router;
