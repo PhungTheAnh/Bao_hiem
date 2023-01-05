@@ -14,3 +14,5 @@ function myfunction1(index, e) {
 function onSubmit(token) {
   document.getElementsByClassName("capcha").submit();
 }
+
+

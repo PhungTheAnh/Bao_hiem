@@ -2,32 +2,45 @@
     color: #303039;
 }
 .form-exam {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     justify-content: center;
+    gap: 40px;
 }
+
+.hvexam{
+    padding: 10px;
+}
+
 .exam {
     max-width: 340px;
     min-height: 490px;
-    text-align: center;
     border-radius: 14px;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
-.exam:hover {
+.hvexam:hover {
     box-shadow: 2px 4px 14px 0px #00000040;
+    border-radius: 14px;
+
 }
 
-.exam:hover > .name-exam {
+.hvexam:hover > .name-exam {
     border-bottom: 1px solid #f27127;
 }
 
 .img-exam {
-    margin: 0 auto;
     display: flex;
-    /*justify-content: ;*/
+    justify-content: center;
+    align-items: center;
 }
 .img-exam img {
-    max-width: 75%;
+    max-width: 90%;
     margin-top: 20px;
 }
 .name-exam {
