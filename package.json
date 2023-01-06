@@ -12,7 +12,10 @@
     "start": "nodemon --inspect src/app.js"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
     "node-sass": "^8.0.0",
-    "nodemon": "..."
+    "nodemon": "...",
+    "prettier": "^2.8.1"
   }
 }

@@ -7,14 +7,15 @@ ul {
     list-style: none;
 }
 
-header, footer{
+header,
+footer {
     display: none;
 }
 
 
 *,
 html {
-    padding: 0;
+    padding   : 0;
     box-sizing: border-box;
 }
 
@@ -25,46 +26,46 @@ input[type=search] {
 
 
 body {
-    color: #000;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    line-height: 1.4;
+    color                    : #000;
+    font-family              : "Poppins", sans-serif;
+    font-weight              : 400;
+    line-height              : 1.4;
     /* background-image      : url(/img/bg/light_dot.jpg); */
     /* background            : linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       url('/img/bg/light_dot.jpg'); */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background: #209956;
+    background-position      : center;
+    background-repeat        : no-repeat;
+    background-size          : cover;
+    background               : #209956;
 }
 
 a {
-    color: #000;
+    color          : #000;
     text-decoration: none;
 }
 
 .container {
     text-align: center;
-    z-index: 1;
+    z-index   : 1;
 }
 
 .wrapper {
-    width: auto;
-    height: 550px;
-    margin: 150px 200px;
-    z-index: 1;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width        : auto;
+    height       : 550px;
+    margin       : 150px 200px;
+    z-index      : 1;
+    box-shadow   : rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
-    background: #fff;
+    background   : #fff;
 }
 
 h1 {
-    padding-top: 100px;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    font-weight: 600;
+    padding-top     : 100px;
+    margin-top      : 100px;
+    margin-bottom   : 50px;
+    font-weight     : 600;
     /* font-size    : 40px; */
-    color: #209956;
+    color           : #209956;
 }
 
 form {
@@ -80,7 +81,7 @@ form {
 /*}*/
 
 label {
-    font-size: 18px;
+    font-size   : 18px;
     margin-right: 10px;
 }
 
@@ -89,28 +90,29 @@ label {
 }
 
 input {
-    padding: 20px 50px 10px 10px;
-    outline: none;
-    border: none;
+    padding      : 20px 50px 10px 10px;
+    outline      : none !important;
+    border       : none;
     border-bottom: 3px solid #ccc;
 }
 
 
 #login {
-    padding: 12px 20px;
+    margin-top: 20px;
+    padding      : 12px 20px;
     border-radius: 30px;
-    font-size: 14px;
-    line-height: 20px;
-    background: #209956;
-    border: 1px solid #209956;
-    font-weight: 500;
-    color: #FFFFFF;
-    transition: all 0.3s ease;
+    font-size    : 14px;
+    line-height  : 20px;
+    background   : #209956;
+    border       : 1px solid #209956;
+    font-weight  : 500;
+    color        : #FFFFFF;
+    transition   : all 0.3s ease;
 }
 
 #login:hover {
-    text-decoration: none;
-    color: #209956;
+    text-decoration : none;
+    color           : #209956;
     background-color: #fff;
 }
 
@@ -119,13 +121,13 @@ input {
 }
 
 .label {
-    font-size: 12px;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.5);
-    padding-top: 15px;
+    font-size   : 12px;
+    font-weight : 500;
+    color       : rgba(0, 0, 0, 0.5);
+    padding-top : 15px;
     padding-left: 10px;
-    position: absolute;
-    transition: all 0.3s;
+    position    : absolute;
+    transition  : all 0.3s;
 }
 
 input:hover {
@@ -133,19 +135,19 @@ input:hover {
 }
 
 .label-focus {
-    font-size: 10px;
-    padding-top: 0px;
+    font-size   : 10px;
+    padding-top : 0px;
     padding-left: 10px;
-    transition: all 0.3s;
+    transition  : all 0.3s;
 }
 
 .home {
-    font-size: 14px;
-    font-weight: 500;
-    color: #035126;
+    font-size         : 14px;
+    font-weight       : 500;
+    color             : #035126;
     /* text-decoration: none; */
-    display: block;
-    margin: 10px auto;
+    display           : block;
+    margin            : 10px auto;
 }
 
 
@@ -154,28 +156,27 @@ input:hover {
 }
 
 span {
-    display: block;
+    display  : block;
     font-size: 12px;
-    color: red;
-    padding: 20px 100px;
+    color    : red;
 }
 
 p {
-    text-align: center !important;
-    font-size: 13px;
-    text-align: left;
+    text-align : center !important;
+    font-size  : 13px;
+    text-align : left;
     font-weight: 600;
-    padding: 10px 0;
+    padding    : 10px 0;
 }
 
 p:hover a {
     /* width            : auto; */
     /* height           : auto; */
-    color: #000;
-    font-size: 15px;
-    transform: scale(1.5);
+    color            : #000;
+    font-size        : 15px;
+    transform        : scale(1.5);
     -webkit-transform: scale(1.5);
-    transition: all 0.3s;
+    transition       : all 0.3s;
 }
 
 .text_fp {
@@ -183,12 +184,12 @@ p:hover a {
 }
 
 .forgot_pw {
-    color: #0056b3;
-    display: block;
-    font-weight: 600;
-    font-size: 12px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    color          : #0056b3;
+    display        : block;
+    font-weight    : 600;
+    font-size      : 12px;
+    padding-left   : 140px;
+    padding-top    : 20px;
     text-decoration: none !important;
 }
 
