@@ -1,5 +1,11 @@
 // Home
 const homeRouter = require("./layout/home");
+// tin-tuc
+const tintucRouter = require("./tin-tuc/tin-tuc");
+// tu-van
+const tuvanRouter = require("./tu-van/tu-van");
+const danhmuc1Router = require("./tu-van/danh-muc");
+const danhmuc1DetailRouter = require("./tu-van/danh-muc-detail");
 // dich-vu
 const dichvuRouter = require("./dich-vu/dich-vu");
 const danhmucRouter = require("./dich-vu/danh-muc");
@@ -26,10 +32,16 @@ const baithiRouter = require("./dao-tao/bai-thi");
 const kqbaithiRouter = require("./dao-tao/kq-bai-thi");
 
 function route(app) {
+  // tin-tuc
+  app.use("/tin-tuc", tintucRouter);
+  // tu-van
+  app.use("/tu-van", tuvanRouter);
+  app.use("/tu-van-danh-muc", danhmuc1Router);
+  app.use("/tu-van-danh-muc-chi-tiet", danhmuc1DetailRouter);
   // dich-vu
   app.use("/dich-vu", dichvuRouter);
-  app.use("/dich-vu/danh-muc", danhmucRouter);
-  app.use("/dich-vu/danh-muc/chi-tiet", danhmucDetailRouter);
+  app.use("/dich-vu-danh-muc", danhmucRouter);
+  app.use("/dich-vu-danh-muc-chi-tiet", danhmucDetailRouter);
   // bao-gia
   app.use("/bao-gia", baogiaRouter);
   // login

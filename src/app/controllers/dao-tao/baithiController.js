@@ -1,7 +1,9 @@
 class BaithiController {
   // [Get] /news
   index(req, res) {
-    res.render("partials/dao-tao/luyen-thi/bai-thi", {title : 'Bài thi'});
+    res.render("partials/dao-tao/luyen-thi-chung-chi/bai-thi", {
+      title: "Bài thi",
+    });
   }
   // [GET] /news/:slug
   // show()
